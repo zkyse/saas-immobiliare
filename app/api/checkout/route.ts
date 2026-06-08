@@ -38,7 +38,7 @@ export async function POST(req: Request) {
         agency_slug: slug,
         agency_email: email,
       },
-      success_url: `${req.headers.get("origin")}/${slug}?session_id={CHECKOUT_SESSION_ID}`,
+      success_url: `${req.headers.get("origin")}/${slug}/dashboard`,
       cancel_url: `${req.headers.get("origin")}/register`,
     });
 
